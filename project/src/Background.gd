@@ -1,6 +1,7 @@
 extends Node2D
 
 func _setup_bricks():
+	randomize()
 	for row in range(6):
 		for column in range(6):
 			var bricky = load("res://src/Brick.tscn")
