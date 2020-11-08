@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED := 3
+const SPEED := 5.0
 
 func _process(delta):
 	if Input.is_action_pressed("go_left"):
