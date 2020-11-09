@@ -1,17 +1,17 @@
 extends Node2D
 
-onready var pause_dialog_desource = preload("res://src/pause_dialog.tscn")
+onready var _pause_dialog_desource = preload("res://src/pause_dialog.tscn")
 
 
 func _setup_bricks():
 	randomize()
-	for row in range(6):
-		for column in range(6):
-			var brick_model = load("res://src/Brick.tscn")
-			var brick = brick_model.instance()
-			brick.position = Vector2(column*65+40, row*30+22.5)
-			brick.get_node("Sprite").frame = row
-			add_child_below_node($BrickContainer, brick)
+	for _r in range(6):
+		for _c in range(6):
+			var _brick_model = load("res://src/Brick.tscn")
+			var _brick = _brick_model.instance()
+			_brick.position = Vector2(_c*65+40, _r*30+22.5)
+			_brick.get_node("Sprite").frame = _r
+			add_child_below_node($BrickContainer, _brick)
 
 
 func _ready():
@@ -28,18 +28,18 @@ func _input(event):
 
 
 func show_pause_dialog():
-	var pause_dialog_node = pause_dialog_desource.instance()
-	self.add_child(pause_dialog_node)
-	pause_dialog_node.delegate = self 
-	pause_dialog_node.popup()
+	var _pause_dialog_node = _pause_dialog_desource.instance()
+	self.add_child(_pause_dialog_node)
+	_pause_dialog_node.delegate = self 
+	_pause_dialog_node.popup()
 	get_tree().set_pause(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 
-func close_dialog(dialog,response):
-	dialog.queue_free()
+func close_dialog(_dialog,_response):
+	_dialog.queue_free()
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	get_tree().set_pause(false)
 	set_process_input(true) 
-	if(response.message == "Continue"):
+	if(_response.message == "Continue"):
 		pass 
