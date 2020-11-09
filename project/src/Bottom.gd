@@ -1,5 +1,5 @@
 extends StaticBody2D
 
 
-func gameover():
+func gameover() -> void:
 	get_tree().change_scene("res://src/lose.tscn")

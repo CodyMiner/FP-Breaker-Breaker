@@ -3,7 +3,7 @@ extends RigidBody2D
 var _bricks_broken := 0
 
 
-func _on_Ball_body_entered(_body):
+func _on_Ball_body_entered(_body) -> void:
 	if _body.has_method("hit"):
 		_body.hit()
 		_bricks_broken += 1

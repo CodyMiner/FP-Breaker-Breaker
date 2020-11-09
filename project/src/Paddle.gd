@@ -3,7 +3,7 @@ extends KinematicBody2D
 const _SPEED := 5.0
 
 
-func _physics_process(_delta):
+func _physics_process(_delta) -> void:
 	var _collision_info : KinematicCollision2D
 	
 	if Input.is_action_pressed("go_left"):
