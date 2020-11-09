@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 const SPEED := 5.0
 
+
 func _physics_process(_delta):
 	var collision_info : KinematicCollision2D
 	
