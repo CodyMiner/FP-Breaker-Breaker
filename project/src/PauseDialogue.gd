@@ -10,6 +10,7 @@ func _draw():
 
 
 func _input(event):
+	print (my_scene.get_class())
 	if event.is_action("ui_cancel")  : 
 		get_tree().set_input_as_handled()
 		_on_btn_continue_pressed()
