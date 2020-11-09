@@ -1,14 +1,15 @@
 extends Node2D
 
-onready var _pause_dialog_desource = preload("res://src/pause_dialog.tscn")
+onready var _pause_dialog_desource: PackedScene = preload("res://src/pause_dialog.tscn")
 
 
 func _setup_bricks():
 	randomize()
 	for _r in range(6):
 		for _c in range(6):
-			var _brick_model = load("res://src/Brick.tscn")
-			var _brick = _brick_model.instance()
+			var _brick_model: PackedScene = load("res://src/Brick.tscn")
+			var _brick: StaticBody2D = _brick_model.instance()
+			print(_brick_model.get_class())
 			_brick.position = Vector2(_c*65+40, _r*30+22.5)
 			_brick.get_node("Sprite").frame = _r
 			add_child_below_node($BrickContainer, _brick)
@@ -28,7 +29,7 @@ func _input(event):
 
 
 func show_pause_dialog():
-	var _pause_dialog_node = _pause_dialog_desource.instance()
+	var _pause_dialog_node := _pause_dialog_desource.instance()
 	self.add_child(_pause_dialog_node)
 	_pause_dialog_node.delegate = self 
 	_pause_dialog_node.popup()
