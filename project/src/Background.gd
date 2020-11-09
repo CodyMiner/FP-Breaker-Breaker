@@ -1,45 +1,40 @@
 extends Node2D
-
-onready var _pause_dialog_desource: PackedScene = preload("res://src/pause_dialog.tscn")
-
-
-func _setup_bricks() -> void:
+func _setup_bricks():
 	randomize()
-	for _r in range(6):
-		for _c in range(6):
-			var _brick_model: PackedScene = load("res://src/Brick.tscn")
-			var _brick: StaticBody2D = _brick_model.instance()
-			_brick.position = Vector2(_c*65+40, _r*30+22.5)
-			_brick.get_node("Sprite").frame = _r
-			add_child_below_node($BrickContainer, _brick)
+	for row in range(6):
+		for column in range(6):
+			var bricky = load("res://src/Brick.tscn")
+			var brick = bricky.instance()
+			brick.position = Vector2(column*65+40, row*30+22.5)
+			brick.get_node("Sprite").frame = row
+			add_child_below_node($BrickContainer, brick)
 
-
-func _ready() -> void:
+func _ready():
 	_setup_bricks()
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	set_process_input(true)
 
-
-func _input(event) -> void:
-	if event.is_action("ui_cancel") and not event.is_pressed():
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
 		get_tree().set_input_as_handled()
-		set_process_input(false)
-		show_pause_dialog()
+		$Popup.popup()
+		get_tree().paused = true
 
 
-func show_pause_dialog() -> void:
-	var _pause_dialog_node := _pause_dialog_desource.instance()
-	self.add_child(_pause_dialog_node)
-	_pause_dialog_node.delegate = self 
-	_pause_dialog_node.popup()
-	get_tree().set_pause(true)
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
-
-func close_dialog(_dialog,_response) -> void:
-	_dialog.queue_free()
+func close_dialog(dialog,response):
+	dialog.queue_free()
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	get_tree().set_pause(false)
+	get_tree().paused = false
 	set_process_input(true) 
-	if(_response.message == "Continue"):
+	if(response.message=="Continue"):
 		pass 
+
+
+func _on_btn_quit_pressed():
+	get_tree().paused = false
+	get_tree().change_scene("res://src/TitleScreen.tscn")
+
+
+func _on_btn_continue_pressed():
+	get_tree().paused = false
+	$Popup.hide()
