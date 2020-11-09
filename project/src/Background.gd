@@ -32,7 +32,9 @@ func close_dialog(dialog,response):
 
 func _on_btn_quit_pressed():
 	get_tree().paused = false
-	get_tree().change_scene("res://src/TitleScreen.tscn")
+	var b := get_tree().change_scene("res://src/TitleScreen.tscn")
+	if b :
+		pass
 
 
 func _on_btn_continue_pressed():
