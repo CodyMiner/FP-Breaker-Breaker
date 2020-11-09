@@ -14,7 +14,6 @@ func _input(event):
 		
 		
 func _on_btn_quit_pressed():
-	print("hii")
 	get_tree().change_scene("res://src/TitleScreen.tscn")
 
 
