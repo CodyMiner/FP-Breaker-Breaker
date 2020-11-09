@@ -7,8 +7,8 @@ func _setup_bricks():
 	randomize()
 	for row in range(6):
 		for column in range(6):
-			var bricky = load("res://src/Brick.tscn")
-			var brick = bricky.instance()
+			var brick_model = load("res://src/Brick.tscn")
+			var brick = brick_model.instance()
 			brick.position = Vector2(column*65+40, row*30+22.5)
 			brick.get_node("Sprite").frame = row
 			add_child_below_node($BrickContainer, brick)
@@ -41,5 +41,5 @@ func close_dialog(dialog,response):
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	get_tree().set_pause(false)
 	set_process_input(true) 
-	if(response.message=="Continue"):
+	if(response.message == "Continue"):
 		pass 
