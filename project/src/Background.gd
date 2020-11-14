@@ -13,6 +13,7 @@ func _setup_bricks():
 
 
 func _ready():
+	randomize()
 	_setup_bricks()
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	set_process_input(true)

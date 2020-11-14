@@ -13,3 +13,7 @@ func _on_Ball_body_entered(_body) -> void:
 				pass
 	elif _body.has_method("gameover"):
 		_body.gameover()
+	
+	var _random_x := randf() * 20.0
+	var _random_y := randf() * 20.0
+	apply_impulse(Vector2.ZERO, Vector2(_random_x, _random_y))
