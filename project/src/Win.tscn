@@ -14,18 +14,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="TextEdit" type="RichTextLabel" parent="."]
 margin_top = 80.0
 margin_right = 322.0
 margin_bottom = 105.0
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 1, 0.560784, 0.560784, 1 )
-custom_colors/word_highlighted_color = Color( 0.231373, 0.682353, 0.376471, 1 )
-custom_colors/font_color_readonly = Color( 0.682353, 0.427451, 0.427451, 1 )
 text = "						     	YOU WON!!!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 55.0365

@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Paddle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Background.gd" type="Script" id=2]
 [ext_resource path="res://src/Brick.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Ball.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Bottom.gd" type="Script" id=5]
+[ext_resource path="res://src/GameUI.tscn" type="PackedScene" id=6]
 
 [sub_resource type="SegmentShape2D" id=1]
 b = Vector2( 0, 500 )
@@ -90,5 +91,11 @@ margin_top = 40.0
 margin_right = 80.0
 margin_bottom = 60.0
 text = "TITLE"
+
+[node name="GameUI" parent="." instance=ExtResource( 6 )]
+margin_left = 342.772
+margin_top = 464.782
+margin_right = 389.772
+margin_bottom = 478.782
 [connection signal="pressed" from="Popup/VBoxContainer/btn_continue" to="." method="_on_btn_continue_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer/btn_quit" to="." method="_on_btn_quit_pressed"]
