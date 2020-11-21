@@ -57,6 +57,7 @@ pause_mode = 1
 [node name="Ball" parent="." instance=ExtResource( 4 )]
 pause_mode = 1
 position = Vector2( 196.952, 399.937 )
+linear_velocity = Vector2( 100, 300 )
 
 [node name="Popup" type="Popup" parent="."]
 pause_mode = 2
