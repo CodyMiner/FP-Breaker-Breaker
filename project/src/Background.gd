@@ -70,12 +70,9 @@ func power_up(_pow : String):
 	match _pow:
 		"Duplicate":
 			print(_pow)
-		"SlowDown":
+		"IncreaseLife":
 			print(_pow)
-		"Increase":
-			print(_pow)
-		"Decrease":
-			print(_pow)
+		
 			
 			
 			

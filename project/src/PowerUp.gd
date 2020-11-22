@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var powers := ["SlowDown", "Duplicate", "Increase", "Decrease"]
+var powers := [ "Duplicate", "IncreaseLife"]
 var speed = 80
 var _pow : int
 var _texture : StreamTexture
