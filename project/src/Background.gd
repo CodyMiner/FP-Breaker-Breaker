@@ -4,7 +4,7 @@ const _BALL_VELOCITY := Vector2(100.0, 300.0)
 var level := 0
 
 
-func _setup_bricks():
+func _setup():
 	randomize()
 	for row in range(6):
 		for column in range(6):
@@ -21,7 +21,7 @@ func _setup_bricks():
 
 func _ready():
 	randomize()
-	_setup_bricks()
+	_setup()
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	set_process_input(true)
 
