@@ -99,6 +99,7 @@ margin_top = 465.0
 margin_right = 339.0
 margin_bottom = 479.0
 size_flags_vertical = 6
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 
 [node name="Hammering" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
@@ -108,6 +109,7 @@ margin_left = 341.0
 margin_top = 465.0
 margin_right = 404.0
 margin_bottom = 479.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "3"
 align = 1
 valign = 1
