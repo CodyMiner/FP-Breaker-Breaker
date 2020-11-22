@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-onready var GameUI = $"/root/Background/GameUI"
+onready var ScoreLabel = $"/root/Background/ScoreLabel"
 
 func _on_Ball_body_exited(_body):
 	var Background = get_parent()
@@ -8,7 +8,7 @@ func _on_Ball_body_exited(_body):
 		_body.hit()
 		Background.bricks_broken += 1
 		if Background.bricks_broken > 35:
-			GameUI.score += 50 * (Background.level+1)
+			ScoreLabel.score += 50 * (Background.level+1)
 			Background.level += 1
 			Background._setup_level()
 			queue_free()
