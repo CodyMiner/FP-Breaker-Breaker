@@ -90,7 +90,7 @@ margin_right = 80.0
 margin_bottom = 60.0
 text = "TITLE"
 
-[node name="GameUI" parent="." instance=ExtResource( 6 )]
+[node name="ScoreLabel" parent="." instance=ExtResource( 6 )]
 margin_left = 18.0
 margin_top = 465.0
 margin_right = 339.0

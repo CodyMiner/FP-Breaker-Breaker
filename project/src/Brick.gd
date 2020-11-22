@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-onready var GameUI = $"/root/Background/GameUI"
+onready var ScoreLabel = $"/root/Background/ScoreLabel"
 
 
 
@@ -11,7 +11,7 @@ func _ready() -> void:
 
 
 func hit() -> void:
-	GameUI.score += ($"/root/Background".level + 1)
+	ScoreLabel.score += ($"/root/Background".level + 1)
 	randomize()
 	var _range = randi() % 3
 	var powerup = load("res://src/PowerUp.tscn").instance()
