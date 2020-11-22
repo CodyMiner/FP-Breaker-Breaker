@@ -1,7 +1,9 @@
 extends Node2D
 
 const _BALL_VELOCITY := Vector2(100.0, 300.0)
-export (int) var level = 0
+export (int) var level := 0
+export (int) var lives := 3
+export (int) var bricks_broken := 0
 var ball_res = preload("res://src/Ball.tscn")
 
 
@@ -12,6 +14,7 @@ func respawn_ball() -> void:
 	add_child(Ball)
 	yield(get_tree().create_timer(1.0), "timeout")
 	Ball.linear_velocity = _BALL_VELOCITY * (1.0 + level/10.0)
+
 
 func spawn_bricks() -> void:
 	$Hammering.play()
@@ -26,7 +29,7 @@ func spawn_bricks() -> void:
 
 
 func _setup_level() -> void:
-	print(level)
+	bricks_broken = 0
 	spawn_bricks()
 	respawn_ball()
 
@@ -66,14 +69,10 @@ func _on_btn_continue_pressed() -> void:
 	get_tree().paused = false
 	$Popup.hide()
 
+
 func power_up(_pow : String):
 	match _pow:
 		"Duplicate":
 			print(_pow)
 		"IncreaseLife":
 			print(_pow)
-		
-			
-			
-			
-			
