@@ -1,17 +1,19 @@
 extends RigidBody2D
 
-var _bricks_broken := 0
+export var bricks_broken := 0
+onready var GameUI = $"/root/Background/GameUI"
 
-
-func _on_Ball_body_entered(_body) -> void:
+func _on_Ball_body_exited(_body):
 	if _body.has_method("hit"):
 		_body.hit()
-		_bricks_broken += 1
-		if _bricks_broken > 35:
-			var _c := get_tree().change_scene("res://src/Win.tscn")
-			if _c:
-				pass
-	elif _body.has_method("gameover"):
+		bricks_broken += 1
+		if bricks_broken > 35:
+			GameUI.score += 50
+			var Background = get_parent()
+			Background.level += 1
+			Background._setup_level()
+			queue_free()
+	elif _body.has_method("gameover"): # Bottom
 		_body.gameover()
 	
 	var _random_x := (randf()-0.5) * 20.0

@@ -1,7 +1,7 @@
 extends StaticBody2D
 
-export (int) var points = 5
 onready var GameUI = $"/root/Background/GameUI"
+
 
 func _ready() -> void:
 	var _time := rand_range(0.0, 1.0)
@@ -10,5 +10,5 @@ func _ready() -> void:
 
 
 func hit() -> void:
-	GameUI.score += points
+	GameUI.score += ($"/root/Background".level + 1)
 	queue_free()

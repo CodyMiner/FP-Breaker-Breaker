@@ -1,11 +1,20 @@
 extends Node2D
 
 const _BALL_VELOCITY := Vector2(100.0, 300.0)
-var level := 0
+export (int) var level = 0
+var ball_res = preload("res://src/Ball.tscn")
 
 
-func _setup() -> void:
-	randomize()
+func respawn_ball():
+	var Ball = ball_res.instance()
+	Ball.linear_velocity = Vector2.ZERO
+	Ball.position = Vector2(200.0, 400.0)
+	add_child(Ball)
+	yield(get_tree().create_timer(1.0), "timeout")
+	Ball.linear_velocity = _BALL_VELOCITY * (1.0 + level/10.0)
+
+
+func _setup_level() -> void:
 	for row in range(6):
 		for column in range(6):
 			var brick_model : PackedScene = load("res://src/Brick.tscn")
@@ -14,14 +23,14 @@ func _setup() -> void:
 			brick.get_node("Sprite").frame = row
 			add_child_below_node($BrickContainer, brick)
 	
-	$Ball.linear_velocity = Vector2.ZERO
-	yield(get_tree().create_timer(1.0), "timeout")
-	$Ball.linear_velocity = _BALL_VELOCITY
+	print(level)
+	respawn_ball()
 
 
 func _ready() -> void:
 	randomize()
-	_setup()
+	level = 0
+	_setup_level()
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	set_process_input(true)
 
