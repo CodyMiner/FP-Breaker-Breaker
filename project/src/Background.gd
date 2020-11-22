@@ -21,7 +21,8 @@ func spawn_bricks() -> void:
 			var brick : StaticBody2D = brick_model.instance()
 			brick.position = Vector2(column*65+40, row*30+22.5)
 			brick.get_node("Sprite").frame = row
-			add_child_below_node($BrickContainer, brick)
+			$BrickContainer.add_child(brick)
+			#add_child_below_node($BrickContainer, brick)
 
 
 func _setup_level() -> void:
@@ -64,3 +65,18 @@ func _on_btn_quit_pressed() -> void:
 func _on_btn_continue_pressed() -> void:
 	get_tree().paused = false
 	$Popup.hide()
+
+func power_up(_pow : String):
+	match _pow:
+		"Duplicate":
+			print(_pow)
+		"SlowDown":
+			print(_pow)
+		"Increase":
+			print(_pow)
+		"Decrease":
+			print(_pow)
+			
+			
+			
+			

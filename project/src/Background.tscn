@@ -41,7 +41,7 @@ shape = SubResource( 1 )
 shape = SubResource( 2 )
 
 [node name="Bottom" type="StaticBody2D" parent="Border"]
-position = Vector2( 190.395, 499.483 )
+position = Vector2( 198.395, 499.483 )
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Bottom"]
@@ -53,6 +53,8 @@ shape = SubResource( 4 )
 
 [node name="BrickContainer" type="Node" parent="."]
 pause_mode = 1
+
+[node name="PowerUps" type="Node2D" parent="."]
 
 [node name="Popup" type="Popup" parent="."]
 pause_mode = 2
