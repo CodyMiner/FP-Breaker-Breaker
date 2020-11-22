@@ -1,5 +1,6 @@
 extends Node2D
 
+
 const _BALL_VELOCITY := Vector2(100.0, 300.0)
 export (int) var level := 0
 export (int) var lives := 3
@@ -12,7 +13,7 @@ func respawn_ball() -> void:
 	var Ball = ball_res.instance()
 	Ball.linear_velocity = Vector2.ZERO
 	Ball.position = Vector2(200.0, 400.0)
-	add_child(Ball)
+	call_deferred("add_child", Ball)
 	yield(get_tree().create_timer(1.0), "timeout")
 	Ball.linear_velocity = _BALL_VELOCITY * (1.0 + level/10.0)
 
