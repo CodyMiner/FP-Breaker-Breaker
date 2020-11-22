@@ -8,6 +8,7 @@ var ball_res = preload("res://src/Ball.tscn")
 
 
 func respawn_ball() -> void:
+	$Paddle.position = Vector2(200, 470)
 	var Ball = ball_res.instance()
 	Ball.linear_velocity = Vector2.ZERO
 	Ball.position = Vector2(200.0, 400.0)
