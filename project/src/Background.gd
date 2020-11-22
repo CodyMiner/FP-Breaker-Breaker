@@ -5,7 +5,7 @@ export (int) var level = 0
 var ball_res = preload("res://src/Ball.tscn")
 
 
-func respawn_ball():
+func respawn_ball() -> void:
 	var Ball = ball_res.instance()
 	Ball.linear_velocity = Vector2.ZERO
 	Ball.position = Vector2(200.0, 400.0)
@@ -13,8 +13,8 @@ func respawn_ball():
 	yield(get_tree().create_timer(1.0), "timeout")
 	Ball.linear_velocity = _BALL_VELOCITY * (1.0 + level/10.0)
 
-
-func _setup_level() -> void:
+func spawn_bricks() -> void:
+	$Hammering.play()
 	for row in range(6):
 		for column in range(6):
 			var brick_model : PackedScene = load("res://src/Brick.tscn")
@@ -22,8 +22,11 @@ func _setup_level() -> void:
 			brick.position = Vector2(column*65+40, row*30+22.5)
 			brick.get_node("Sprite").frame = row
 			add_child_below_node($BrickContainer, brick)
-	
+
+
+func _setup_level() -> void:
 	print(level)
+	spawn_bricks()
 	respawn_ball()
 
 
