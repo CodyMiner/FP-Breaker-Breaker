@@ -9,6 +9,6 @@ func _ready() -> void:
 	self.visible = true
 
 
-func hit():
+func hit() -> void:
 	GameUI.score += points
 	queue_free()
