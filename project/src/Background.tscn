@@ -91,10 +91,11 @@ margin_bottom = 60.0
 text = "TITLE"
 
 [node name="GameUI" parent="." instance=ExtResource( 6 )]
-margin_left = 342.772
-margin_top = 464.782
-margin_right = 389.772
-margin_bottom = 478.782
+margin_left = 18.0
+margin_top = 465.0
+margin_right = 339.0
+margin_bottom = 479.0
+size_flags_vertical = 6
 
 [node name="Hammering" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
