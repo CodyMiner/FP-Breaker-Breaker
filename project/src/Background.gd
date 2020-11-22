@@ -1,5 +1,8 @@
 extends Node2D
 
+const _BALL_VELOCITY := Vector2(100.0, 300.0)
+var level := 0
+
 
 func _setup_bricks():
 	randomize()
@@ -10,6 +13,10 @@ func _setup_bricks():
 			brick.position = Vector2(column*65+40, row*30+22.5)
 			brick.get_node("Sprite").frame = row
 			add_child_below_node($BrickContainer, brick)
+	
+	$Ball.linear_velocity = Vector2.ZERO
+	yield(get_tree().create_timer(1.0), "timeout")
+	$Ball.linear_velocity = _BALL_VELOCITY
 
 
 func _ready():
