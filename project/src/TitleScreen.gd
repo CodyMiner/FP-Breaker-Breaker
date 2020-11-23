@@ -14,7 +14,7 @@ func _physics_process(_delta) -> void:
 
 func _on_TextureButton_pressed() -> void:
 	var a := get_tree().change_scene("res://src/Background.tscn")
-	if a :
+	if a:
 		pass
 
 

@@ -5,6 +5,8 @@ onready var LivesLabel = $"/root/Background/LivesLabel"
 
 func _on_Ball_body_exited(_body):
 	var Background = get_parent()
+	var _is_only_ball = true
+	
 	if _body.has_method("hit"):
 		_body.hit()
 		Background.bricks_broken += 1
@@ -13,7 +15,7 @@ func _on_Ball_body_exited(_body):
 			Background.level += 1
 			Background._setup_level()
 			queue_free()
-	elif _body.has_method("gameover"): # Bottom
+	elif _body.has_method("gameover") and _is_only_ball: # Bottom
 		Background.lives -= 1
 		LivesLabel.liveslabel =  Background.lives
 		if Background.lives < 1:

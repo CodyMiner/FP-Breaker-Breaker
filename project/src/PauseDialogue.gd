@@ -17,7 +17,9 @@ func _input(event) -> void:
 
 func _on_btn_quit_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to(my_scene)
+	var a := get_tree().change_scene_to(my_scene)
+	if a:
+		pass
 
 
 func _on_btn_continue_pressed() -> void:
