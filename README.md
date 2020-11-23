@@ -8,7 +8,7 @@ Don't let the ball hit the bottom.
 Break every brick!
 
 ## Reflection
-Our main failure was in our poor time management. We put off the work to the end of Saturday. To fix this, we will add deadlines to individual issues instead of only one deadline for the entire iteration. However, we did do a good job of finding and utilizing outside resources for the few difficulties we had, such as the paddle stopping at the edges of the screen and the deletion of bricks.
+In this iteration, we had pretty much the same time management issues as last iteration. After this problem last iteration, we setup github issues with deadlines for each issue to ensure work didn't pile up the on November 21st/22nd. However, not all members followed the deadlines, and members who had later issues that required the first issue to be complete before they could complete their issue were forced to wait. To solve this, going forward team members will have to notify the group if they cannot complete their issue by the deadline, otherwise the other team member will take over their work and mark them off on the peer grading rubric.
 
 ## Grade
 - [X] D-1: The repository link is submitted to Canvas before the project deadline.
