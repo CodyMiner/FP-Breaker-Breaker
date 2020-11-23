@@ -5,7 +5,12 @@ onready var LivesLabel = $"/root/Background/LivesLabel"
 
 func _on_Ball_body_exited(_body):
 	var Background = get_parent()
-	var _is_only_ball = true
+	
+	var _num_balls := 0
+	for child in Background.get_children():
+		if child.name == "Ball":
+			_num_balls += 1
+	var _is_only_ball = _num_balls == 1
 	
 	if _body.has_method("hit"):
 		_body.hit()
@@ -15,13 +20,14 @@ func _on_Ball_body_exited(_body):
 			Background.level += 1
 			Background._setup_level()
 			queue_free()
-	elif _body.has_method("gameover") and _is_only_ball: # Bottom
-		Background.lives -= 1
-		LivesLabel.liveslabel =  Background.lives
-		if Background.lives < 1:
-			_body.gameover()
-		else:
-			Background.respawn_ball()
+	elif _body.has_method("gameover"): # Bottom
+		if _is_only_ball:
+			Background.lives -= 1
+			LivesLabel.liveslabel =  Background.lives
+			if Background.lives < 1:
+				_body.gameover()
+			else:
+				Background.respawn_ball()
 		queue_free()
 	
 	var _random_x := (randf()-0.5) * 20.0

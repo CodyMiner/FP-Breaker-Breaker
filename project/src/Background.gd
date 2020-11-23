@@ -40,7 +40,6 @@ func _ready() -> void:
 	randomize()
 	level = 0
 	_setup_level()
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	set_process_input(true)
 
 
