@@ -48,4 +48,9 @@ Grade earned: A
 
 ## Legal
 
-All assets were created in-house.
+Construction sound is "hammering.wav", originally "hammering 2.wav". Created by cognito perceptu March 15th, 2006. CC0 1.0 Universal. Soruce: https://freesound.org/people/cognito%20perceptu/sounds/17012/
+
+All other assets were created in-house.
+
+
+
