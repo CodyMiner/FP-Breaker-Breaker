@@ -1,12 +1,12 @@
 extends Node2D
 
-
 const _BALL_VELOCITY := Vector2(100.0, 300.0)
 export (int) var level := 0
 export (int) var lives := 3
 export (int) var bricks_broken := 0
 export (int) var num_balls := 0
 var ball_res = preload("res://src/Ball.tscn")
+onready var LivesLabel = $"/root/Background/LivesLabel"
 
 
 func spawn_ball() -> void:
@@ -29,7 +29,6 @@ func spawn_bricks() -> void:
 			brick.position = Vector2(column*65+40, row*30+22.5)
 			brick.get_node("Sprite").frame = row
 			$BrickContainer.add_child(brick)
-			#add_child_below_node($BrickContainer, brick)
 
 
 func _setup_level() -> void:
@@ -80,3 +79,4 @@ func power_up(_pow : String):
 			spawn_ball()
 		"IncreaseLife":
 			lives += 1
+			LivesLabel.liveslabel =  lives
