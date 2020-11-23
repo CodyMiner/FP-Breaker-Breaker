@@ -82,5 +82,4 @@ func power_up(_pow : String):
 			yield(get_tree().create_timer(1.0), "timeout")
 			Ball.linear_velocity = _BALL_VELOCITY
 		"IncreaseLife":
-			var Background = get_parent()
-			Background.lives =+1
+			lives += 1
