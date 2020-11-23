@@ -79,6 +79,7 @@ func power_up(_pow : String):
 			Ball.position = Vector2(200.0, 400.0)
 			call_deferred("add_child", Ball)
 			yield(get_tree().create_timer(1.0), "timeout")
-			Ball.linear_velocity = _BALL_VELOCITY
+			if Ball != null:
+				Ball.linear_velocity = _BALL_VELOCITY
 		"IncreaseLife":
 			lives += 1
