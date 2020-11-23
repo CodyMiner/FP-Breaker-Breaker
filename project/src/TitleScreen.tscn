@@ -75,7 +75,7 @@ margin_right = 300.31
 margin_bottom = 510.029
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 tab_size = 8
-text = "Final Project Iteration 1
+text = "Final Project Iteration 2
 
 Break the bricks to win the game!"
 scroll_active = false
