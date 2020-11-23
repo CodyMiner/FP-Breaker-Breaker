@@ -1,11 +1,11 @@
 # Breaker Breaker
 ### A [game](https://bsu-cs315.github.io/FP-Breaker-Breaker/) by Cody Miner and Janardhen Jayavel
 ## Instructions
-Move the paddle left with A or left arrow.
-Move the paddle right with d or right arrow.
-Pause with escape.
-Don't let the ball hit the bottom.
-Break every brick!
+- Move the paddle left with A or left arrow.
+- Move the paddle right with d or right arrow.
+- Pause with escape.
+- Don't let the ball hit the bottom.
+- Break every brick!
 
 ## Reflection
 In this iteration, we had pretty much the same time management issues as last iteration. After this problem last iteration, we setup github issues with deadlines for each issue to ensure work didn't pile up the on November 21st/22nd. However, not all members followed the deadlines, and members who had later issues that required the first issue to be complete before they could complete their issue were forced to wait. To solve this, going forward team members will have to notify the group if they cannot complete their issue by the deadline, otherwise the other team member will take over their work and mark them off on the peer grading rubric.
