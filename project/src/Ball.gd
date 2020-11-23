@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 onready var ScoreLabel = $"/root/Background/ScoreLabel"
+onready var LivesLabel = $"/root/Background/LivesLabel"
 
 func _on_Ball_body_exited(_body):
 	var Background = get_parent()
@@ -14,7 +15,7 @@ func _on_Ball_body_exited(_body):
 			queue_free()
 	elif _body.has_method("gameover"): # Bottom
 		Background.lives -= 1
-		print(Background.lives)
+		LivesLabel.liveslabel =  Background.lives
 		if Background.lives < 1:
 			_body.gameover()
 		else:

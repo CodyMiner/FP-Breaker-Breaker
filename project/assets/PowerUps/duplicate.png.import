@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/duplicate.png-eed7aef55d58fbf1acceaa08eac38b43.stex"
+path="res://.import/duplicate.png-f233c262759f5035538b4bd764e3dfa5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/duplicate.png"
-dest_files=[ "res://.import/duplicate.png-eed7aef55d58fbf1acceaa08eac38b43.stex" ]
+source_file="res://assets/PowerUps/duplicate.png"
+dest_files=[ "res://.import/duplicate.png-f233c262759f5035538b4bd764e3dfa5.stex" ]
 
 [params]
 

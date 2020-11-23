@@ -75,6 +75,12 @@ func _on_btn_continue_pressed() -> void:
 func power_up(_pow : String):
 	match _pow:
 		"Duplicate":
-			print(_pow)
+			var Ball = ball_res.instance()
+			Ball.linear_velocity = Vector2.ZERO
+			Ball.position = Vector2(200.0, 400.0)
+			call_deferred("add_child", Ball)
+			yield(get_tree().create_timer(1.0), "timeout")
+			Ball.linear_velocity = _BALL_VELOCITY
 		"IncreaseLife":
-			print(_pow)
+			var Background = get_parent()
+			Background.lives =+1

@@ -4,9 +4,9 @@
 
 [node name="GameUI" type="Label"]
 margin_left = 128.102
-margin_top = 11.9165
+margin_top = 11.362
 margin_right = 175.102
-margin_bottom = 25.9165
+margin_bottom = 25.362
 text = "Score:0"
 script = ExtResource( 1 )
 __meta__ = {
