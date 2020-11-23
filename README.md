@@ -29,7 +29,7 @@ Our main failure was in our poor time management. We put off the work to the end
 - [X] A-2: The game includes the conventional player experience loop of title, gameplay, and ending.
 - [X] A-3: Earn <em>N</em>*&lceil;<em>P</em>/2&rceil; stars, where <em>N</em> is the iteration number and <em>P</em> is the number of people on the team.
 - [ ] ⭐ Include a dynamic (non-static) camera
-- [ ] ⭐ Incorporate parallax background scrolling
+- [X] ⭐ Incorporate parallax background scrolling
 - [ ] ⭐ Use paper doll animations
 - [ ] ⭐ Incorporate smooth transitions between title, game, and end states, rather than jumping between states via <code>change_scene</code>
 - [ ] ⭐ Support both touch and mouse/keyboard input in the Web build
