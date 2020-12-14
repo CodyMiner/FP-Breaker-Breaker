@@ -8,7 +8,7 @@
 - Break every brick!
 
 ## Reflection
-In this iteration, we had pretty much the same time management issues as last iteration. After this problem last iteration, we setup github issues with deadlines for each issue to ensure work didn't pile up the on November 21st/22nd. However, not all members followed the deadlines, and members who had later issues that required the first issue to be complete before they could complete their issue were forced to wait. To solve this, going forward team members will have to notify the group if they cannot complete their issue by the deadline, otherwise the other team member will take over their work and mark them off on the peer grading rubric.
+This iteration wasn't that difficult when compared to the previous submissions. We had some little issue before submission because Janardhen Jayavel had gone home in a different time zone but then we still managed to finish the task as planned. The partiticle effect was a great effect to add to the ball. 
 On the plus side, this iteration added a lot of polish to what was a much more boring game. While not "addictive" per se, both of us have felt like playing through it a few times to beat our old high score. This game is starting to feel more like a real game and less like a student project.
 
 ## Grade
@@ -37,7 +37,7 @@ On the plus side, this iteration added a lot of polish to what was a much more b
 - [ ] ⭐ Allow the user to control the volume of music and sound effects independently.
 - [ ] ⭐ Incorporate juiciness and document it in the <code>README.md</code>
 - [ ] ⭐ Incorporate another kind of juiciness and document it in the <code>README.md</code>
-- [ ] ⭐ Use particle effects
+- [X] ⭐ Use particle effects
 - [ ] ⭐ Use different layers and masks to manage collisions and document this in the <code>README.md</code>
 - [ ] ⭐ Incorporate pop into your HUD or title screen using <code>Tween</code> or <code>AnimationPlayer</code>
 - [ ] ⭐ Include an AI-controlled characters
