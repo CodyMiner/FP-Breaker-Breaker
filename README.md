@@ -3,6 +3,7 @@
 ## Instructions
 - Move the paddle left with A or left arrow.
 - Move the paddle right with d or right arrow.
+- Catch powerups for some fun with playing.
 - Pause with escape.
 - Don't let the ball hit the bottom.
 - Break every brick!
