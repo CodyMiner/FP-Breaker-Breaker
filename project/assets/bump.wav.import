@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/hammering.wav-4747a15d6e713bd03ab219d4e306db3e.sample"
+path="res://.import/bump.wav-ca93c08cbbe97b7a284ce41c8931d1d7.sample"
 
 [deps]
 
-source_file="res://assets/hammering.wav"
-dest_files=[ "res://.import/hammering.wav-4747a15d6e713bd03ab219d4e306db3e.sample" ]
+source_file="res://assets/bump.wav"
+dest_files=[ "res://.import/bump.wav-ca93c08cbbe97b7a284ce41c8931d1d7.sample" ]
 
 [params]
 

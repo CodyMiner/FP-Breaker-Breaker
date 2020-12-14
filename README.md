@@ -49,7 +49,9 @@ Grade earned: A
 
 ## Legal
 
-Construction sound is "hammering.wav", originally "hammering 2.wav". Created by cognito perceptu March 15th, 2006. CC0 1.0 Universal. Soruce: https://freesound.org/people/cognito%20perceptu/sounds/17012/
+Construction sound is "hammering.wav", originally "hammering 2.wav". Created by cognito perceptu March 15th, 2006. CC0 1.0 Universal. Source: https://freesound.org/people/cognito%20perceptu/sounds/17012/
+
+Ball hit sound is "bump.wav", originally "bump 2.wav". Created by Calethos Febuary 16th, 2007. CC0 1.0 Universal. Source: https://freesound.org/people/Calethos/sounds/31113/
 
 All other assets were created in-house.
 

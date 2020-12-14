@@ -6,6 +6,7 @@ onready var LivesLabel = $"/root/Background/LivesLabel"
 func _on_Ball_body_exited(_body):
 	var Background = get_parent()
 	
+	$Bump.play()
 	if _body.has_method("hit"):
 		_body.hit()
 		Background.bricks_broken += 1
