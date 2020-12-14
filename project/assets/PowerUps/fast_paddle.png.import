@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/duplicate.png-f233c262759f5035538b4bd764e3dfa5.stex"
+path="res://.import/fast_paddle.png-9423972581fec534f465374861473eee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PowerUps/duplicate.png"
-dest_files=[ "res://.import/duplicate.png-f233c262759f5035538b4bd764e3dfa5.stex" ]
+source_file="res://assets/PowerUps/fast_paddle.png"
+dest_files=[ "res://.import/fast_paddle.png-9423972581fec534f465374861473eee.stex" ]
 
 [params]
 
