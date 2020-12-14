@@ -7,6 +7,9 @@ export (int) var bricks_broken := 0
 export (int) var num_balls := 0
 var ball_res = preload("res://src/Ball.tscn")
 onready var LivesLabel = $"/root/Background/LivesLabel"
+var PaddleCollision = null
+var PaddleSprite = null
+var PaddleKB = null
 
 
 func spawn_ball() -> void:
@@ -44,6 +47,9 @@ func _ready() -> void:
 	_setup_level()
 	set_process_input(true)
 	$SoundTrack.play()
+	PaddleSprite = get_tree().get_nodes_in_group("PaddleSprite")[0]
+	PaddleKB = get_tree().get_nodes_in_group("PaddleKB")[0]
+	PaddleCollision = get_tree().get_nodes_in_group("PaddleCollision")[0]
 
 
 func _input(event) -> void:
@@ -81,3 +87,8 @@ func power_up(_pow : String):
 		"IncreaseLife":
 			lives += 1
 			LivesLabel.liveslabel =  lives
+		"long_paddle":
+			PaddleCollision.global_scale.x = 2
+			PaddleSprite.global_scale.x = 2
+		"fast_paddle":
+			PaddleKB._SPEED = PaddleKB._SPEED * 2.0

@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const _SPEED := 5.0
+onready var  _SPEED := 5.0
 
 
 func _physics_process(_delta) -> void:
