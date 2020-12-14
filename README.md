@@ -8,8 +8,8 @@
 - Break every brick!
 
 ## Reflection
-This iteration wasn't that difficult when compared to the previous submissions. We had some little issue before submission because Janardhen Jayavel had gone home in a different time zone but then we still managed to finish the task as planned. The partiticle effect was a great effect to add to the ball. 
-On the plus side, this iteration added a lot of polish to what was a much more boring game. While not "addictive" per se, both of us have felt like playing through it a few times to beat our old high score. This game is starting to feel more like a real game and less like a student project.
+This iteration wasn't that difficult when compared to the previous submissions. We had some little issue before submission because Janardhen Jayavel had gone home in a different time zone but then we still managed to finish the task as planned. The partiticle effect was a great effect to add to the ball that felt like a big leap in the game. Above all, it's special as it's the last submission with every requirements. We are happy that it's done finally.
+
 
 ## Grade
 - [X] D-1: The repository link is submitted to Canvas before the project deadline.
