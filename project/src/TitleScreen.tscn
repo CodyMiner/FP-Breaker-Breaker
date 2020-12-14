@@ -69,13 +69,13 @@ anchor_left = 2.61419e-05
 anchor_top = 0.000696533
 anchor_right = 2.61472e-05
 anchor_bottom = 0.000696533
-margin_left = 15.3102
+margin_left = 14.8501
 margin_top = 407.029
-margin_right = 300.31
+margin_right = 299.85
 margin_bottom = 510.029
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 tab_size = 8
-text = "Final Project Iteration 2
+text = "Final Project Iteration 3
 
 Break the bricks to win the game!"
 scroll_active = false
