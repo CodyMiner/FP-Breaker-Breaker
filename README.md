@@ -53,6 +53,8 @@ Construction sound is "hammering.wav", originally "hammering 2.wav". Created by 
 
 Ball hit sound is "bump.wav", originally "bump 2.wav". Created by Calethos Febuary 16th, 2007. CC0 1.0 Universal. Source: https://freesound.org/people/Calethos/sounds/31113/
 
+Sound track is "christmas_eve.ogg", originally "TRG_Banks\_-\_01\_-\_Christmas_Eve". Created by TRG Banks September 15th 2018. CC0 1.0 Universal. Source: https://freemusicarchive.org/music/TRG_Banks/TRG_Banks_Christmas_Album/Christmas_Eve
+
 All other assets were created in-house.
 
 

@@ -43,6 +43,7 @@ func _ready() -> void:
 	level = 0
 	_setup_level()
 	set_process_input(true)
+	$SoundTrack.play()
 
 
 func _input(event) -> void:
